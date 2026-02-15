@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <!-- Hero -->
+  <section class="h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-earth/20"></div>
+    <!-- Placeholder for hero image/video -->
+    <div class="absolute inset-0 bg-gradient-to-b from-earth/40 via-earth/20 to-sand"></div>
+    <div class="relative z-10 text-center px-6">
+      <h1 class="font-serif text-5xl md:text-7xl text-sand mb-6 leading-tight">
+        Landscape design<br/><em>rooted in California</em>
+      </h1>
+      <p class="text-sand/80 text-lg md:text-xl max-w-xl mx-auto mb-10">
+        Concept design, plant palettes, and construction consulting for homes that live outdoors.
+      </p>
+      <a href="/contact" class="inline-block border border-sand text-sand px-8 py-3 text-sm uppercase tracking-widest hover:bg-sand hover:text-earth transition-all">
+        Start a Project
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="max-w-7xl mx-auto px-6 py-24">
+    <h2 class="font-serif text-3xl md:text-4xl mb-16 text-center">Selected Work</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Project cards - will be dynamic once we have content -->
+      <a href="/projects/6752-dume-dr" class="group block">
+        <div class="aspect-[4/3] bg-stone/20 mb-4 overflow-hidden">
+          <!-- Project image placeholder -->
+          <div class="w-full h-full bg-gradient-to-br from-sage/30 to-clay/20 group-hover:scale-105 transition-transform duration-700"></div>
+        </div>
+        <h3 class="font-serif text-xl mb-1">6752 Dume Drive</h3>
+        <p class="text-stone text-sm">A coastal palette of natives and Mediterranean warmth on the Malibu bluffs.</p>
+      </a>
+
+      <a href="/projects" class="group block">
+        <div class="aspect-[4/3] bg-stone/20 mb-4 overflow-hidden">
+          <div class="w-full h-full bg-gradient-to-br from-clay/20 to-sage/30 group-hover:scale-105 transition-transform duration-700"></div>
+        </div>
+        <h3 class="font-serif text-xl mb-1">More Projects Coming</h3>
+        <p class="text-stone text-sm">New work added as we build out the portfolio.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Value Prop -->
+  <section class="bg-earth text-sand py-24">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-serif text-3xl md:text-4xl mb-8">Design that starts in the dirt</h2>
+      <p class="text-sand/80 text-lg leading-relaxed max-w-2xl mx-auto">
+        Every project begins with the land — its light, its soil, its story. We design landscapes 
+        that feel inevitable, like they were always meant to be there. From concept books to 
+        construction, we see it through.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="max-w-7xl mx-auto px-6 py-24">
+    <div class="grid md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="font-serif text-xl mb-3">Landscape Design</h3>
+        <p class="text-stone text-sm leading-relaxed">Full-service residential design from concept through construction. Native and Mediterranean plant palettes tailored to the California coast.</p>
+      </div>
+      <div>
+        <h3 class="font-serif text-xl mb-3">Concept Books</h3>
+        <p class="text-stone text-sm leading-relaxed">Detailed design documents with plant palettes, material selections, and spatial plans. A complete vision for your outdoor space.</p>
+      </div>
+      <div>
+        <h3 class="font-serif text-xl mb-3">Construction Consulting</h3>
+        <p class="text-stone text-sm leading-relaxed">Project management and construction oversight to make sure the design gets built right. From permits to final walkthrough.</p>
+      </div>
+    </div>
+    <div class="text-center mt-16">
+      <a href="/services" class="inline-block border border-earth text-earth px-8 py-3 text-sm uppercase tracking-widest hover:bg-earth hover:text-sand transition-all">
+        All Services
+      </a>
+    </div>
+  </section>
+</Layout>

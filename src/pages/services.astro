@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Services" description="Landscape design, concept books, plant palettes, and construction consulting in Santa Barbara and Ventura County.">
+  <section class="pt-32 pb-24 max-w-5xl mx-auto px-6">
+    <h1 class="font-serif text-4xl md:text-5xl mb-6">Services</h1>
+    <p class="text-stone text-lg max-w-2xl mb-20">From first sketch to final walkthrough — design and construction expertise for residential landscapes on the California coast.</p>
+
+    <div class="space-y-24">
+      <!-- Landscape Design -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="aspect-[4/3] bg-stone/20">
+          <div class="w-full h-full bg-gradient-to-br from-sage/20 to-clay/10"></div>
+        </div>
+        <div>
+          <h2 class="font-serif text-2xl mb-4">Landscape Design</h2>
+          <p class="text-stone leading-relaxed mb-4">Full-service residential landscape design. We work from concept through construction documentation, creating spaces that are rooted in the site and built to last.</p>
+          <ul class="text-stone text-sm space-y-2">
+            <li>• Site analysis & design concept</li>
+            <li>• Hardscape & softscape design</li>
+            <li>• Planting plans & species selection</li>
+            <li>• Construction documentation</li>
+            <li>• Material sourcing & procurement</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Concept Books -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="md:order-2 aspect-[4/3] bg-stone/20">
+          <div class="w-full h-full bg-gradient-to-br from-clay/20 to-sage/10"></div>
+        </div>
+        <div class="md:order-1">
+          <h2 class="font-serif text-2xl mb-4">Concept Books</h2>
+          <p class="text-stone leading-relaxed mb-4">Comprehensive design documents that capture the full vision for your outdoor space. Plant palettes, material boards, spatial plans, and inspiration — everything you need to see the finished landscape before ground breaks.</p>
+          <ul class="text-stone text-sm space-y-2">
+            <li>• Custom plant palettes with species details</li>
+            <li>• Material & finish selections</li>
+            <li>• Spatial layouts & flow diagrams</li>
+            <li>• Mood & inspiration boards</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Construction Consulting -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="aspect-[4/3] bg-stone/20">
+          <div class="w-full h-full bg-gradient-to-br from-stone/20 to-sage/10"></div>
+        </div>
+        <div>
+          <h2 class="font-serif text-2xl mb-4">Construction Consulting</h2>
+          <p class="text-stone leading-relaxed mb-4">Landscape designs only work if they're built right. We bring years of construction management experience to every project — overseeing installation, managing contractors, and making sure the vision translates to reality.</p>
+          <ul class="text-stone text-sm space-y-2">
+            <li>• Project management & scheduling</li>
+            <li>• Contractor coordination</li>
+            <li>• Installation oversight</li>
+            <li>• Quality assurance & punchlist</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-24">
+      <a href="/contact" class="inline-block border border-earth text-earth px-8 py-3 text-sm uppercase tracking-widest hover:bg-earth hover:text-sand transition-all">
+        Start a Project
+      </a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Start a Project" description="Get in touch about your landscape design project in Santa Barbara, Ventura, or Malibu.">
+  <section class="pt-32 pb-24 max-w-3xl mx-auto px-6">
+    <h1 class="font-serif text-4xl md:text-5xl mb-6">Start a Project</h1>
+    <p class="text-stone text-lg mb-16">Tell us about your space. We'll get back to you within a few days to talk through the possibilities.</p>
+
+    <form name="inquiry" method="POST" data-netlify="true" class="space-y-8">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <label for="name" class="block text-sm uppercase tracking-wide mb-2">Name</label>
+          <input type="text" id="name" name="name" required
+            class="w-full bg-transparent border-b border-stone/40 py-3 focus:border-earth focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm uppercase tracking-wide mb-2">Email</label>
+          <input type="email" id="email" name="email" required
+            class="w-full bg-transparent border-b border-stone/40 py-3 focus:border-earth focus:outline-none transition-colors" />
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <label for="phone" class="block text-sm uppercase tracking-wide mb-2">Phone <span class="text-stone/50">(optional)</span></label>
+          <input type="tel" id="phone" name="phone"
+            class="w-full bg-transparent border-b border-stone/40 py-3 focus:border-earth focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label for="location" class="block text-sm uppercase tracking-wide mb-2">Project Location</label>
+          <input type="text" id="location" name="location" placeholder="City or neighborhood"
+            class="w-full bg-transparent border-b border-stone/40 py-3 focus:border-earth focus:outline-none transition-colors placeholder:text-stone/30" />
+        </div>
+      </div>
+
+      <div>
+        <label for="description" class="block text-sm uppercase tracking-wide mb-2">Tell us about your project</label>
+        <textarea id="description" name="description" rows="5"
+          class="w-full bg-transparent border-b border-stone/40 py-3 focus:border-earth focus:outline-none transition-colors resize-none"></textarea>
+      </div>
+
+      <div>
+        <label for="budget" class="block text-sm uppercase tracking-wide mb-2">Budget Range <span class="text-stone/50">(optional)</span></label>
+        <select id="budget" name="budget"
+          class="w-full bg-transparent border-b border-stone/40 py-3 focus:border-earth focus:outline-none transition-colors">
+          <option value="">Select a range</option>
+          <option value="under-25k">Under $25,000</option>
+          <option value="25k-50k">$25,000 – $50,000</option>
+          <option value="50k-100k">$50,000 – $100,000</option>
+          <option value="100k-plus">$100,000+</option>
+        </select>
+      </div>
+
+      <button type="submit" class="border border-earth text-earth px-8 py-3 text-sm uppercase tracking-widest hover:bg-earth hover:text-sand transition-all mt-4">
+        Send Inquiry
+      </button>
+    </form>
+
+    <div class="mt-20 pt-12 border-t border-stone/20">
+      <p class="text-stone text-sm">Prefer to reach out directly?</p>
+      <p class="mt-2">
+        <a href="mailto:hello@rhizecreative.com" class="text-earth hover:text-sage transition-colors">hello@rhizecreative.com</a>
+      </p>
+    </div>
+  </section>
+</Layout>
