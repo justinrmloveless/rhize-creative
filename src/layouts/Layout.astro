@@ -42,6 +42,34 @@ const { title, description = 'Landscape design rooted in California. Concept des
       <slot />
     </main>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-sand hidden">
+      <div class="flex justify-end p-6">
+        <button id="mobile-menu-close" class="text-earth">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col items-center gap-8 pt-12 text-lg tracking-wide uppercase">
+        <a href="/projects" class="hover:text-sage transition-colors">Projects</a>
+        <a href="/services" class="hover:text-sage transition-colors">Services</a>
+        <a href="/about" class="hover:text-sage transition-colors">About</a>
+        <a href="/contact" class="border border-earth px-6 py-2 hover:bg-earth hover:text-sand transition-all">Start a Project</a>
+      </div>
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const closeBtn = document.getElementById('mobile-menu-close');
+      if (menuBtn && menu && closeBtn) {
+        menuBtn.addEventListener('click', () => menu.classList.remove('hidden'));
+        closeBtn.addEventListener('click', () => menu.classList.add('hidden'));
+        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+      }
+    </script>
+
     <footer class="bg-earth text-sand/80 py-16 mt-24">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid md:grid-cols-3 gap-12">
@@ -62,7 +90,7 @@ const { title, description = 'Landscape design rooted in California. Concept des
             <h4 class="text-sm uppercase tracking-wide text-sand mb-4">Connect</h4>
             <div class="flex flex-col gap-2 text-sm">
               <a href="https://instagram.com/rhizecreative" class="hover:text-sand transition-colors">Instagram</a>
-              <a href="mailto:hello@rhizecreative.com" class="hover:text-sand transition-colors">hello@rhizecreative.com</a>
+              <a href="mailto:hello@rhizecreative.design" class="hover:text-sand transition-colors">hello@rhizecreative.design</a>
             </div>
           </div>
         </div>
