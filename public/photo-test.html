@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { padding: 20px; font-family: system-ui; }
+        .test { background: #f0f0f0; padding: 15px; margin: 15px 0; border-radius: 8px; }
+        img { max-width: 100%; margin: 10px 0; border: 2px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Photo Deployment Test</h1>
+    
+    <div class="test">
+        <h3>Test 1: Simple photo</h3>
+        <img src="temp-photos/IMG_0665.jpg" alt="Test 1">
+        <p>Path: temp-photos/IMG_0665.jpg</p>
+    </div>
+    
+    <div class="test">
+        <h3>Test 2: Different photo</h3>
+        <img src="temp-photos/construction-excavation-foundation.jpg" alt="Test 2">
+        <p>Path: temp-photos/construction-excavation-foundation.jpg</p>
+    </div>
+    
+    <div class="test">
+        <p><strong>If you see ? instead of photos, the temp-photos folder isn't deploying.</strong></p>
+    </div>
+</body>
+</html>
