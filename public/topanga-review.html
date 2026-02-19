@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1111 Topanga - Photo Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            margin: 0; 
+            padding: 20px; 
+            background: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .instructions {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .instructions strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .photo-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+        }
+        .photo-number {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .filename {
+            padding: 12px 20px;
+            font-size: 12px;
+            color: #95a5a6;
+            border-top: 1px solid #ecf0f1;
+            font-family: 'SF Mono', Monaco, monospace;
+        }
+        .count {
+            background: #3498db;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 24px; }
+            .instructions { padding: 16px; }
+            .photo-number { padding: 12px 16px; font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>1111 Topanga - Photo Review</h1>
+        <div class="subtitle">Select photos for Rhize Creative website</div>
+        <div class="count">6 photos</div>
+    </div>
+    
+    <div class="instructions">
+        <strong>Voice Commands:</strong>
+        Say "Keep 1, 3, 5" or "Remove 2, 4" etc.<br>
+        Sofia will store your selections and move to next project.
+    </div>
+    
+    <div class="photo-grid">
+        <div class="photo-item">
+            <div class="photo-number">Photo 1</div>
+            <img src="portfolio-photos/1111-topanga/69878135719__4079E2D7-9C42-46FE-A30F-C6F41A1AE52D.jpg" alt="Topanga photo 1" loading="lazy">
+            <div class="filename">69878135719__4079E2D7-9C42-46FE-A30F-C6F41A1AE52D.jpg</div>
+        </div>
+        
+        <div class="photo-item">
+            <div class="photo-number">Photo 2</div>
+            <img src="portfolio-photos/1111-topanga/IMG_1606.jpg" alt="Topanga photo 2" loading="lazy">
+            <div class="filename">IMG_1606.jpg</div>
+        </div>
+        
+        <div class="photo-item">
+            <div class="photo-number">Photo 3</div>
+            <img src="portfolio-photos/1111-topanga/IMG_1608.jpg" alt="Topanga photo 3" loading="lazy">
+            <div class="filename">IMG_1608.jpg</div>
+        </div>
+        
+        <div class="photo-item">
+            <div class="photo-number">Photo 4</div>
+            <img src="portfolio-photos/1111-topanga/IMG_1609.jpg" alt="Topanga photo 4" loading="lazy">
+            <div class="filename">IMG_1609.jpg</div>
+        </div>
+        
+        <div class="photo-item">
+            <div class="photo-number">Photo 5</div>
+            <img src="portfolio-photos/1111-topanga/IMG_1610.jpg" alt="Topanga photo 5" loading="lazy">
+            <div class="filename">IMG_1610.jpg</div>
+        </div>
+        
+        <div class="photo-item">
+            <div class="photo-number">Photo 6</div>
+            <img src="portfolio-photos/1111-topanga/IMG_1613.jpg" alt="Topanga photo 6" loading="lazy">
+            <div class="filename">IMG_1613.jpg</div>
+        </div>
+    </div>
+</body>
+</html>
