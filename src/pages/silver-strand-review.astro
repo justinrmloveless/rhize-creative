@@ -1,0 +1,151 @@
+---
+// Silver Strand photo review - first 20 photos sample
+const title = "Silver Strand - Photo Review (Sample)";
+const photos = [
+    "57584087956__1E6C5DBE-61C9-437D-A92F-73DAF1BD3404.JPG",
+    "58102219263__370FB6E8-B5C9-43E6-AE5D-297C6C471ACA.JPG",
+    "58102440389__C7C58C63-D65C-4CA4-8DF6-1F8D7CD88678.JPG",
+    "58653842722__8075D306-F6E9-4C5D-A624-6E637A0B9C25.JPG",
+    "58653856731__CBE50A93-B9B4-45D5-8973-74E989EEEFBA.JPG",
+    "58654003751__573E4BF3-7918-45D7-8F94-78BD9695AC4C.JPG",
+    "58654005471__14482545-784E-43E4-BBAF-C54FFB832E1D.JPG",
+    "58654007989__71D326F9-4CBE-42D9-9A6E-DC62184F2929.JPG",
+    "58716788070__7CF1F995-09AC-4C58-9B1F-AAFE28FBD0DB.JPG",
+    "58716790562__7CFB9102-B2A9-4CB0-B5F9-3354334B82B3.JPG",
+    "58856050079__24498AF0-FF14-49DD-AA64-686D319B194F.JPG",
+    "58959825800__A690B10C-E3AD-4563-99EE-61D1257D2E8F.JPG",
+    "58959828914__428329C1-667B-4506-9B26-482E6242C2C4.JPG",
+    "58959829705__2EBC1F51-8B7C-4ADA-88BE-D08B97F135E7.JPG",
+    "58966292743__FD68DA9D-DCC7-4B3E-BBA4-24ED4C30BC6B.JPG",
+    "58966426961__1980BE01-8E97-42BF-9A3E-0F6BA9B71DC5.JPG",
+    "63675865369__BC978FFE-5A94-4840-8F3D-0F39C5F765EA.JPG",
+    "65707617245__305070EA-4266-4561-8810-060A4C7900E5.jpg",
+    "65843066597__FF4918BD-B129-4521-B0E3-20D890253CAF.jpg",
+    "65843067872__896CBD80-F48F-4F07-BA06-136933ABF630.jpg"
+];
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            margin: 0; 
+            padding: 20px; 
+            background: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .instructions {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .instructions strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .photo-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .photo-number {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .filename {
+            padding: 12px 20px;
+            font-size: 12px;
+            color: #95a5a6;
+            border-top: 1px solid #ecf0f1;
+        }
+        .count {
+            background: #e74c3c;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .note {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 24px; }
+            .instructions { padding: 16px; }
+            .photo-number { padding: 12px 16px; font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Silver Strand - Photo Review</h1>
+        <div class="subtitle">First 20 photos sample (108 total)</div>
+        <div class="count">{photos.length} photos shown</div>
+    </div>
+    
+    <div class="note">
+        <strong>Sample Review:</strong> 108 photos total - starting with first 20 for mobile workflow.<br>
+        If these look good, we'll continue with remaining photos in batches.
+    </div>
+    
+    <div class="instructions">
+        <strong>Voice Commands:</strong>
+        Say "Keep 1, 3, 5-8" or "Remove 2, 4, 9-15" etc.<br>
+        Sofia will process selections and show next batch if needed.
+    </div>
+    
+    <div class="photo-grid">
+        {photos.map((photo, index) => (
+            <div class="photo-item">
+                <div class="photo-number">Photo {index + 1}</div>
+                <img src={`/temp-photos/${photo}`} alt={`Silver Strand photo ${index + 1}`} loading="lazy" />
+                <div class="filename">{photo}</div>
+            </div>
+        ))}
+    </div>
+</body>
+</html>
